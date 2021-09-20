@@ -16,8 +16,11 @@ sum = num1+num2
 print(sum)
 
 a = "chocolate"
-b = "TOKYO REVENGERS!"
+boys = "TOKYO REVENGERS!"
+g = int("123")
 
 print("i like %s ice cream" %a)
 print("i am {0} years old and my name is {1}" .format("15","Aleksis"))
-print(f"I LOVE {b}")
+print(f"I LOVE {boys}")
+
+print("%a hundred" %g)
