@@ -25,3 +25,6 @@ print(list)
 
 list.pop(3) # izdzes no saraksta noradito elementu
 print(list)
+
+pop_element = list.pop(3)
+print(pop_element)
