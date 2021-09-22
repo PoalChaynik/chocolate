@@ -17,3 +17,5 @@ print(newTuple.count(0)) #saskaita cik 0 ir tupele
 
 # {}
 
+newSet = {'peanut','butter','jelly',}
+print(newSet)
