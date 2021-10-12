@@ -18,3 +18,9 @@ def sakas_vienadi(vards):
 
 print(sakas_vienadi('Maza Lama'))
 print(sakas_vienadi('Liela Lama'))
+
+
+def summa(s1,s2):
+    return s1 + s2 == 20 or s1 == 20 or s2 == 20
+
+print(summa(5,5))
