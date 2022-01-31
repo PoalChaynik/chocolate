@@ -1,0 +1,4 @@
+Vārds:Pēteris
+Vecums:13
+Telefona numurs:25252525
+Adrese:Ziedu iela 2
