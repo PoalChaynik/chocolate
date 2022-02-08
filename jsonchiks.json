@@ -1,0 +1,21 @@
+{
+    "Vards": "Xingqui",
+    "Vecums": 96,
+    "Dzivs": true,
+    "Nedzivs": false,
+    "Berni": [
+        "Xiangling",
+        "Xingyang"
+    ],
+    "Dzivnieki": null,
+    "Masinas": [
+        {
+            "Modelis": "Nissan GTR",
+            "Gads": 2002
+        },
+        {
+            "Modelis": "Toyota 69",
+            "Gads": 1996
+        }
+    ]
+}
