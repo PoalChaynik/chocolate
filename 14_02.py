@@ -53,3 +53,31 @@ def salidzinasana(nosaukums1,nosaukums2):
 
 
 salidzinasana('pirmais.csv','otrais.csv')
+
+
+#Define funkciju, kuras argumenti ir divu json failu nosaukumi
+#Parveido failus par vardnicam
+
+#Abas vardnicas apvienot un ierakstit rezultatu jauna json faila
+
+#Salidzinat vardnicu atslegas un izvadit tikai tos datus, kuri ir atrodami viena/abas vardnicas
+import json
+kopa = []
+def jason(name1,name2):
+    file1 = open(name1,'r',encoding='utf-8')
+    file2 = open(name2,'r',encoding='utf-8')
+    a = json.load(file1)
+    b = json.load(file2)
+    kopa.append(a)
+    kopa.append(b)
+    file2.close()
+    file1.close()
+    file3 = open('rezultats.json','w',encoding='utf-8')
+    json.dump(kopa,file3,indent=4, separators=(',',':'))
+
+    for i in a:
+        print()
+
+    
+
+jason('viens.json','divi.json')

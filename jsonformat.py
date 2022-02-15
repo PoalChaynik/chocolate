@@ -1,7 +1,4 @@
 import json
-from winreg import KEY_ENUMERATE_SUB_KEYS
-
-from pkg_resources import ensure_directory
 
 #Vardnica
 
