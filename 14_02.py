@@ -78,12 +78,14 @@ def jason(name1,name2):
     for i in b.values():
         if i not in a.values():
             print(i)
-            
+
     for i in a.values():
         if i not in b.values():
             print(i)
         if i in b.values():
             print(i)
+    
+    file3.close()
 
 
 
