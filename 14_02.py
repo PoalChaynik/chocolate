@@ -74,9 +74,18 @@ def jason(name1,name2):
     file1.close()
     file3 = open('rezultats.json','w',encoding='utf-8')
     json.dump(kopa,file3,indent=4, separators=(',',':'))
+    
+    for i in b.values():
+        if i not in a.values():
+            print(i)
+            
+    for i in a.values():
+        if i not in b.values():
+            print(i)
+        if i in b.values():
+            print(i)
 
-    for i in a:
-        print()
+
 
     
 
