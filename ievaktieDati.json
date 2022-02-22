@@ -1,6 +1,17 @@
 {
-    "Vards": "aleksis",
-    "Uzvards": "pocs",
-    "Vecums": 123,
-    "Telefona Numurs": 123
+    "a": {
+        "Uzvārds": "b",
+        "Vecums": "10",
+        "Telefona numurs": "12345678"
+    },
+    "barnijs": {
+        "Uzvārds": "bronza",
+        "Vecums": "22",
+        "Telefona numurs": "12345678"
+    },
+    "bronija": {
+        "Uzvārds": "krieviete",
+        "Vecums": "10",
+        "Telefona numurs": "09876543"
+    }
 }

@@ -9,10 +9,50 @@
 #Savaktie dati jasaglaba faila 'ievaktieDati.json'
 
 import json
-vardss = input('ievadiet vardu: ')
-uzvardss = input('ievadiet uzvardu: ')
-vecumss = int(input('ievadiet vecumu: '))
-tell = int(input('ievadiet telefona numuru: '))
+#varda parbaude
+while True:
+    vardss = input('ievadiet vardu: ')
+    if vardss.isdigit() == False:
+        if vardss.strip() == '':
+            print('ievadiet vardu atkartoti')
+            continue
+        else:
+            break
+    else:
+        print('ievadiet vardu atkartoti')
+        continue
+
+        
+#uzvarda parbaude
+while True:
+    uzvardss = input('ievadiet uzvardu: ')
+    if uzvardss.isdigit() == False:
+        if uzvardss.strip() == '':
+            print('ievadiet uzvardu atkartoti')
+            continue
+        else:
+            break
+    else:
+        print('ievadiet uzvardu atkartoti')
+        continue
+
+#vecuma parbaude
+while True:
+    vecumss = input('ievadiet vecumu: ')
+    if vecumss.isdigit():
+        break
+    else:
+        print('ievadiet vecumu atkartoti')
+        continue
+#telefona numura parbaude
+while True:
+    tell = input('ievadiet telefona numuru: ')
+    if tell.isdigit():
+        if len(tell) == 8:
+            break
+    else:
+        print('ievadiet telefona numuru atkartoti')
+        continue
 
 vardnica = {
     "Uzvārds":uzvardss,
