@@ -1,22 +1,6 @@
-[
-    {
-        "Vards": "aleksis",
-        "Uzvards": "pocs",
-        "Vecums": 12,
-        "Telefona Numurs": 202020
-    },
-    [
-        {
-            "Vards": "ap",
-            "Uzvards": "ap",
-            "Vecums": 133,
-            "Telefona Numurs": 13
-        },
-        {
-            "Vards": "ap",
-            "Uzvards": "app",
-            "Vecums": 12,
-            "Telefona Numurs": 12
-        }
-    ]
-]
+{
+    "Vards": "aleksis",
+    "Uzvards": "pocs",
+    "Vecums": 123,
+    "Telefona Numurs": 123
+}
