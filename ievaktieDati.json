@@ -11,7 +11,12 @@
     },
     "bronija": {
         "Uzvārds": "krieviete",
-        "Vecums": "10",
-        "Telefona numurs": "09876543"
+        "Vecums": "100",
+        "Telefona numurs": "10293845"
+    },
+    "artom": {
+        "Uzvārds": "putin",
+        "Vecums": "1000",
+        "Telefona numurs": "69696969"
     }
 }

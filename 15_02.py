@@ -63,15 +63,16 @@ vardnica = {
 with open("ievaktieDati.json","r", encoding="utf-8") as fails:
     json_data = json.load(fails)
 
-    ir_saraksta =False
+    ir_saraksta = True
     for key in json_data.keys():
         if key == vardss:
             break
         if key != vardss:
-            ir_saraksta = True
+            print(key)
+            ir_saraksta == False
 
-    if ir_saraksta == False:
-        print("Vārds ir sarakstā")
+    if ir_saraksta == True:
+        print('Vards ir saraksta')
     else:
         json_data[vardss]=vardnica
 
