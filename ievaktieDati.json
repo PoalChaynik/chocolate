@@ -1,9 +1,16 @@
 {
-    "a": {
-        "Uzvārds": "b",
-        "Vecums": "10",
-        "Telefona numurs": "12345678"
-    },
+    "a": [
+        {
+            "Uzvārds": "c",
+            "Vecums": "1",
+            "Telefona numurs": "12345678"
+        },
+        {
+            "Uzvārds": "k",
+            "Vecums": "1",
+            "Telefona numurs": "12345678"
+        }
+    ],
     "barnijs": {
         "Uzvārds": "bronza",
         "Vecums": "22",
@@ -18,5 +25,15 @@
         "Uzvārds": "putin",
         "Vecums": "1000",
         "Telefona numurs": "69696969"
+    },
+    "lk": {
+        "Uzvārds": "kjb",
+        "Vecums": "1",
+        "Telefona numurs": "12345678"
+    },
+    "b": {
+        "Uzvārds": "k",
+        "Vecums": "1",
+        "Telefona numurs": "12345678"
     }
 }

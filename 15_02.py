@@ -66,14 +66,17 @@ with open("ievaktieDati.json","r", encoding="utf-8") as fails:
     ir_saraksta = True
     for key in json_data.keys():
         if key == vardss:
+            if not isinstance(json_data[vardss],list):
+                json_data[vardss] = [json_data[vardss]]
+            json_data[vardss].append(vardnica)
+            if_saraksta = True
+            print('key==vards')
             break
-        if key != vardss:
-            print(key)
-            ir_saraksta == False
+        else:
+            ir_saraksta = False
 
-    if ir_saraksta == True:
-        print('Vards ir saraksta')
-    else:
+    if not ir_saraksta:
+        print('navSaraksta')
         json_data[vardss]=vardnica
 
 
