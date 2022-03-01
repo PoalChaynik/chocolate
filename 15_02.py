@@ -70,12 +70,17 @@ def kont_add():
         else:
             print('ievadiet telefona numuru atkartoti')
             continue
-
+    import datetime as time
+    
+    a = time.datetime.now()
+    parv_laiks = a.isoformat()
+    laiks = json.dumps(parv_laiks)
 
     vardnica = {
         "Uzvārds":uzvardss,
         "Vecums":vecumss,
-        "Telefona numurs":tell
+        "Telefona numurs":tell,
+        "Laiks":laiks
     }
 
     kont_save(vardss,vardnica)
@@ -92,14 +97,14 @@ def kont_save(vardss,vardnica):
                     json_data[vardss] = [json_data[vardss]]
                 json_data[vardss].append(vardnica)
                 if_saraksta = True
-                print('ir saraksta')
+                print('\nVards Jau Eksiste!')
                 break
             else:
                 ir_saraksta = False
 
         if not ir_saraksta:
-            print('nav saraksta')
             json_data[vardss]=vardnica
+            print('\nVards Tika Pievienots!')
 
 
     with open("ievaktieDati.json","w", encoding="utf-8") as fails:
