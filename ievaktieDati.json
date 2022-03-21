@@ -9,6 +9,12 @@
             "Uzvārds": "k",
             "Vecums": "1",
             "Telefona numurs": "12345678"
+        },
+        {
+            "Uzvārds": "c",
+            "Vecums": "134",
+            "Telefona numurs": "12345678",
+            "Laiks": "2022-03-01T13:55:09.966363"
         }
     ],
     "barnijs": {

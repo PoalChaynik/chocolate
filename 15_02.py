@@ -71,10 +71,9 @@ def kont_add():
             print('ievadiet telefona numuru atkartoti')
             continue
     import datetime as time
-    
+
     a = time.datetime.now()
-    parv_laiks = a.isoformat()
-    laiks = json.dumps(parv_laiks)
+    laiks = a.isoformat()
 
     vardnica = {
         "Uzvārds":uzvardss,
