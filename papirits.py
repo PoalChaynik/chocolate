@@ -1,8 +1,38 @@
 import random
-
+import json
+import sqlite3
+vecumss = ''
+nick = ''
 varianti = ['a','s','p']
 
+def registracija():
+    print('Registrejieties lai saglabatu datus\n')
+
+    while True:
+        nickname = input('ievadiet nickname: ')
+        if nickname.isdigit() == False:
+            if nickname.strip() == '':
+                print('ievadiet nickname atkartoti')
+                continue
+            else:
+                nick = nickname
+                break
+        else:
+            print('ievadiet nickname atkartoti')
+            continue
+
+    while True:
+        vecums = input('ievadiet vecumu: ')
+        if vecums.isdigit():
+            vecumss = vecums
+            break
+        else:
+            print('ievadiet vecumu atkartoti')
+            continue
+
 def LocalGame():
+    win = False
+    lose = False
     while True:
         p1 = input("[Player1] Izvelieties: 'a' - akmens, 's' - skeres, 'p' - papirits\n")
         for i in varianti:
@@ -47,6 +77,8 @@ def LocalGame():
 
 
 def CPU():
+    win = False
+    lose = False
     while True:
         p1 = input("[Player1] Izvelieties: 'a' - akmens, 's' - skeres, 'p' - papirits\n")
         for i in varianti:
@@ -91,11 +123,12 @@ def CPU():
 
 
 while True:
-    start = input("Izvelieties Speles Rezimu: '1' - Pret Datoru, '2' - Lokala Spele, '3' - Iziet\n")
-
+    start = input("Izvelieties Speles Rezimu: '1' - Pret Datoru, '2' - Lokala Spele, '3' - Registracija, '4' - Iziet\n")
     if start == '1':
         CPU()
     elif start == '2':
         LocalGame()
     elif start == '3':
+        registracija()
+    elif start == '4':
         exit()
