@@ -5,6 +5,16 @@ vecumss = ''
 nick = ''
 varianti = ['a','s','p']
 
+db = sqlite3.connect('dati.db')
+
+db.execute("""CREATE TABLE IF NOT EXISTS dati
+    (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    nickname TEXT NOT NULL,
+    vecums INT NOT NULL,
+    win INT NOT NULL,
+    lose INT NOT NULL
+    )""")
+
 def registracija():
     print('Registrejieties lai saglabatu datus\n')
 
@@ -29,6 +39,13 @@ def registracija():
         else:
             print('ievadiet vecumu atkartoti')
             continue
+
+    db.execute("""INSERT INTO dati
+        (nickname, vecums, win, lose)
+        VALUES (:nickname,:vecums,0,0)
+    """,{'nickname':nick,'vecums':vecumss})
+
+    db.commit()
 
 def LocalGame():
     win = False
