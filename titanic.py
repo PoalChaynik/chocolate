@@ -1,5 +1,6 @@
 import datetime
 import sqlite3
+import xlsxwriter
 from tracemalloc import start
 start = datetime.datetime.now()
 db = sqlite3.connect('titanicDB.db')
@@ -21,11 +22,20 @@ print(rezultati)
 [print(rinda[0]) for rinda in rezultati]
 
 dati = db.execute("""SELECT Name, Age FROM titanic WHERE Survived > 0
+ORDER BY Name
 """)
 rezultati = dati.fetchall()
 [print(rinda[0],rinda[1], end=" ") for rinda in rezultati]
 print('\n')
 print(len(rezultati),'Cilveki izdzivoja')
+
+file = xlsxwriter.Workbook('titanika_cilveki.xlsx')
+lapa = file.add_worksheet()
+
+
+for a in range(151):
+    for rinda in rezultati:
+        lapa.write(f'A{a}','aa')
 
 end = datetime.datetime.now()
 laiks = end-start

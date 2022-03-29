@@ -11,7 +11,17 @@ lapa1.write(1,0,'Labdien')
 lapa1.write(2,0,'Labrit')
 lapa1.write(3,0,'Labvakar')
 
-wb.save('meginajums.xls')
+# wb.save('meginajums.xls')
 
 import xlsxwriter
+
+fails = xlsxwriter.Workbook('meginajums2.xlsx')
+lapa = fails.add_worksheet()
+
+lapa.write('A1','Riga')
+lapa.write('C2','London')
+
+fails.close()
+
+
 
