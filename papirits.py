@@ -1,10 +1,12 @@
 import random
 import json
 import sqlite3
+import time
 vecumss = ''
 nick = ''
 varianti = ['a','s','p']
 registracija_notika = False
+timerEnd = ''
 
 db = sqlite3.connect('dati.db')
 db3 = db.cursor()
@@ -54,6 +56,10 @@ def registracija():
 
 def winning():
     print("Uzvara|Zaudejums:",win,lose)
+    global timerEnd
+    if registracija_notika == False:
+        timerEnd = time.process_time() - TimerStart
+        print(timerEnd)
     if win == True and registracija_notika == True:
         db.execute("""UPDATE dati SET win = win + 1 WHERE id = (SELECT MAX(id) FROM dati)""")
         db.commit()
@@ -69,6 +75,9 @@ def saving():
     
     with open("speletaju_dati.json","w", encoding="utf-8") as fails:
         json.dump(rezultats,fails, indent = 4, ensure_ascii=False)
+    global timerEnd
+    timerEnd = time.process_time() - TimerStart
+    print(timerEnd)
 
 db.commit()
 
@@ -100,7 +109,8 @@ def LocalGame():
     a = varianti[0]
     s = varianti[1]
     p = varianti[2]
-
+    global TimerStart
+    TimerStart = time.process_time()
     if p1 == a:
         if p2 == s:
             print('akmens x skeres = WIN!')
@@ -157,7 +167,8 @@ def CPU():
     a = varianti[0]
     s = varianti[1]
     p = varianti[2]
-
+    global TimerStart
+    TimerStart = time.process_time()
     if p1 == a:
         if p2 == s:
             print('akmens x skeres = WIN!')
