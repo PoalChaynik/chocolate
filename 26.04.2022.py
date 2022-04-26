@@ -39,4 +39,21 @@ def askint():
             print('Execution')
 
 
-askint()
+# askint()
+
+try:
+    for i in ['a','b','c']:
+        print(i**2)
+except:
+    print('ERROR: Nav iespejams kapinat burtus!')
+
+
+x=5
+y=0
+
+try:
+    z=x/y
+except:
+    print('ERROR: Nav iespejams dalit ar nulli')
+finally:
+    print(f'{x} nedalas ar {y}')
