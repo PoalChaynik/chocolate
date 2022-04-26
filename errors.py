@@ -24,9 +24,22 @@ while sk > 0:
 saraksts = [int(sk) for sk in input("Ievadi skaitlus, atdalot tos ar atstarpi:").split()]
 
 for i in range(len(saraksts)):
-    if saraksts[i] == saraksts[i + 1] and saraksts[i] != len(saraksts):
-        #Līmenis nepareizs (Kompilēšanas kļūda)
+    if i == (len(saraksts)-1):
+        break
+    elif saraksts[i] == saraksts[i + 1]:
         print(saraksts[i], saraksts[i + 1])
         #Līmenis nepareizs (Kompilēšanas Kļūda)
-    else:
-        break
+
+
+# Lietotājs ievada vairākus skaitļus, atdalot tos ar atstarpi. Izvadi lielākā ievadītā skaitļa vērtību un indeksu sarakstā!
+
+skaitli = [int(skaitli) for skaitli in input("Ievadi skaitlus, atdalot tos ar atstarpi:").split()]
+
+lielIndex = 0
+
+for i in range(1, len(skaitli)):
+    if skaitli[i] > skaitli[lielIndex]:
+        lielIndex = i
+
+print(f"Lielakais skaitlis: {skaitli[lielIndex]} ar indeksu {lielIndex}") 
+# abām pēdiņām ir jābūt vienādām (Kompilēšanas kļūda)
