@@ -1,7 +1,7 @@
 def ievade():
     while True:
         time = (input('Ievadiet Laiku (24H Formātā/BEZ MINŪTĒM): '))
-        if time.isdigit() and int(time) <= 24: 
+        if time.isdigit() and int(time) <= 24 and len(time) <= 2: 
             time = int(time)
             if time >= 0 and time <6:
                 print('Ar labu nakti!')
